@@ -16,7 +16,7 @@ html {
 body {
     box-sizing: border-box;
     background: rgb(107,150,143); /* FALLBACK COLOR */
-    background: linear-gradient(174deg, rgba(107,150,143,1) 0%, rgba(138,180,171,1) 50%, rgba(200,235,228,1) 100%); /* BACKUP GRADIENT */
+    background: linear-gradient(174deg, rgba(107,150,143,1) 0%, rgba(138,180,171,1) 50%, rgba(200,235,228,1) 100%); /* FALLBACK GRADIENT */
     background: linear-gradient(limegreen, transparent), linear-gradient(90deg, skyblue, transparent), linear-gradient(-90deg, coral, transparent);
     background-blend-mode: screen;
 }
