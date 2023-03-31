@@ -106,7 +106,7 @@ footer {grid-area: footer;}
 @media only screen and (max-width: 1400px) {
     .container {
         grid-template-columns: 1fr;
-        grid-template-rows: minmax(5rem, auto) auto 1fr minmax(120rem, auto) minmax(120rem, auto) auto;
+        grid-template-rows: minmax(5rem, auto) auto 1fr minmax(125rem, auto) minmax(125rem, auto) auto;
         grid-template-areas: 
             "nav"
             "header"
@@ -152,7 +152,7 @@ nav .navbar {
     border-radius: 1rem;
     transition: all .3s;
     background-color: #50ffad; /* FALLBACK COLOR */
-    background: linear-gradient(limegreen, transparent), linear-gradient(90deg, skyblue, transparent), linear-gradient(-90deg, coral, transparent);
+    background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
     background-blend-mode: screen;
 }
 
@@ -186,7 +186,7 @@ nav .navbar {
     line-height: 1.7;
     text-transform: uppercase;
     color: #886434; /* FALLBACK COLOR */
-    background: linear-gradient(limegreen, transparent), linear-gradient(90deg, skyblue, transparent), linear-gradient(-90deg, coral, transparent);
+    background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -278,7 +278,7 @@ main .content {
 
 #views .text-wrapper .main-heading {
     color: #886434; /* FALLBACK COLOR */
-    background: linear-gradient(limegreen, transparent), linear-gradient(90deg, skyblue, transparent), linear-gradient(-90deg, coral, transparent);
+    background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -289,7 +289,7 @@ main .content {
     font-size: 2.5rem;
     letter-spacing: .5rem;
     color: #886434; /* FALLBACK COLOR */
-    background: linear-gradient(limegreen, transparent), linear-gradient(90deg, skyblue, transparent), linear-gradient(-90deg, coral, transparent);
+    background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -309,8 +309,10 @@ main .content {
     font-size: 2rem;
     font-weight: 400;
     letter-spacing: .2rem;
+    padding: 0 1rem 0 1rem;
+    line-height: 1.5;
     color: #886434; /* FALLBACK COLOR */
-    background: linear-gradient(limegreen, transparent), linear-gradient(90deg, skyblue, transparent), linear-gradient(-90deg, coral, transparent);
+    background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -367,10 +369,10 @@ main .content {
 
     #header h1 {
         margin: 0;
-        padding: 3rem 0 3rem 0;
+        padding: 3rem 5rem 3rem 5rem;
         font-size: 2.5rem;
         color: #886434; /* FALLBACK COLOR */
-        background: linear-gradient(limegreen, transparent), linear-gradient(90deg, skyblue, transparent), linear-gradient(-90deg, coral, transparent);
+        background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -505,6 +507,11 @@ main .content {
 
     #views .text-wrapper .main-heading, .sub-heading {
         color: #886434;
+        padding: 0 1rem 0 1rem;
+    }
+
+    #views .text-wrapper .main-heading {
+        font-size: 3rem;
     }
 
     #views .text-wrapper .sub-heading {
@@ -521,6 +528,10 @@ main .content {
     .sidebar .images-container .img-wrapper {
         width: 30rem;
         height: 22rem;
+    }
+
+    #views {
+        margin-bottom: 8rem;
     }
 
     #views .img-wrapper {
