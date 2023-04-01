@@ -519,7 +519,7 @@ main .content {
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 430px) {
     main .content .img-wrapper {
         width: 30rem;
         height: 22rem;
