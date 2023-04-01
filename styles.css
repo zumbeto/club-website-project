@@ -79,6 +79,7 @@ body {
     gap: 2rem;
     background-color: rgb(136, 100, 52, 0.4);
     margin: 15rem auto;
+    animation: fadeInleft 1s ease-in-out;
 }
 
 /********** GRID SYSTEM **********/
@@ -191,6 +192,7 @@ nav .navbar {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-blend-mode: screen;
+    animation: fadeInLeft 1.5s ease-in-out;
 }
 
 /********** MAIN CONTENT **********/
@@ -538,5 +540,23 @@ main .content {
     #views .img-wrapper {
         width: 30rem;
         height: 22rem;
+    }
+}
+
+/********** KEYFRAMES **********/
+
+@keyframes fadeInLeft {
+    0% {
+        transform: translateX(-30rem);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(4rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
