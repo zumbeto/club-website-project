@@ -79,7 +79,6 @@ body {
     gap: 2rem;
     background-color: rgb(136, 100, 52, 0.4);
     margin: 15rem auto;
-    animation: fadeInleft 1s ease-in-out;
 }
 
 /********** GRID SYSTEM **********/
@@ -170,7 +169,7 @@ nav .navbar {
     background-position: center;
     background-repeat: no-repeat;
     min-height: 80vh;
-    min-width: 100vw;
+    max-width: 100vw;
     position: relative;
     top: -.7rem; /* To compensate for fixed navbar */
     display: flex;
@@ -540,6 +539,40 @@ main .content {
     #views .img-wrapper {
         width: 30rem;
         height: 22rem;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    main .content .img-wrapper {
+        width: 26rem;
+        height: 22rem;
+    }
+
+    .sidebar .images-container .img-wrapper {
+        width: 26rem;
+        height: 22rem;
+    }
+    
+    #views .img-wrapper {
+        width: 26rem;
+        height: 22rem;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    main .content .img-wrapper {
+        width: 22rem;
+        height: 17rem;
+    }
+
+    .sidebar .images-container .img-wrapper {
+        width: 25rem;
+        height: 17rem;
+    }
+
+    #views .img-wrapper {
+        width: 25rem;
+        height: 19rem;
     }
 }
 
