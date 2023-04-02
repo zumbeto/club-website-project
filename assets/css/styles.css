@@ -219,7 +219,9 @@ nav .navbar {
     display: block;
     width: 100%;
     height: .5rem;
-    background-color: #ffeeda;
+    background-color: #ffeeda; /* Fallback */
+    background: linear-gradient(#32cd32, black), linear-gradient(90deg, #87ceeb, black), linear-gradient(-90deg, #ff7f50, black);
+    background-blend-mode: screen;
     margin: .6rem 0;
     transition: .4s;
 }
