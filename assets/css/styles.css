@@ -77,8 +77,8 @@ body {
     display: flex;
     flex-flow: column;
     gap: 2rem;
-    background-color: rgb(136, 100, 52, 0.2);
-    margin: 15rem auto;
+    background-color: rgb(136, 100, 52, 0.4);
+    margin: 5rem auto;
 }
 
 .cta {
@@ -97,6 +97,7 @@ body {
     background-color: #50ffad; /* FALLBACK COLOR */
     background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
     background-blend-mode: screen;
+    animation: fadeInLeft 1.7s ease-in-out;
 }
 
 .cta:hover, .cta:active, .cta:visited {
@@ -154,7 +155,7 @@ footer {grid-area: footer;}
     padding-right: 10rem;
     padding-left: 10rem;
     margin: 0 auto;
-    background-color: rgb(136, 100, 52, 0.2);
+    background-color: rgb(136, 100, 52, 0.4);
     z-index: 1000;
 }
 
@@ -234,7 +235,7 @@ nav .navbar {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-blend-mode: screen;
-    animation: fadeInLeft 1.5s ease-in-out;
+    animation: fadeInLeft 1.2s ease-in-out;
 }
 
 #header p {
@@ -250,14 +251,11 @@ nav .navbar {
     -webkit-text-fill-color: transparent;
     background-blend-mode: screen;
     animation: fadeInLeft 1.5s ease-in-out;
-
 }
 
 /********** MAIN CONTENT **********/
 
 main .content {
-    position: relative;
-    top: 9.1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -286,8 +284,6 @@ main .content {
 /********** SIDEBAR SECTION **********/
 
 .sidebar {
-    position: relative;
-    top: 9.1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -464,7 +460,6 @@ main .content {
 }
 
 @media only screen and (max-width: 710px) {
-    /********** GLOBAL STYLES **********/
     .img-wrapper {
         width: 25rem;
         height: 20rem;
@@ -489,12 +484,10 @@ main .content {
         line-height: 1.5;
     }
 
-    /********** LOGO **********/
     .menu-container {
         padding: 0 5rem 0 5rem;
     }
 
-    /********** HEADER **********/
     #header h1 {
         padding: 0 5rem 0 5rem;
     }
@@ -503,12 +496,10 @@ main .content {
         padding: 0 5rem 0 5rem;
     }
 
-    /********** CTA **********/
     #header .cta {
         margin-left: 5rem;
     }
 
-    /********** MAIN CONTENT **********/
     main .content {
         gap: 4rem;
         margin: 2rem 2rem 0 2rem;
@@ -542,7 +533,6 @@ main .content {
         height: 30rem;
     }
 
-    /********** SIDEBAR SECTION **********/
     .container {
         overflow: hidden;
     }
@@ -566,7 +556,6 @@ main .content {
         height: 30rem;
     }
 
-    /********** VIEWS SECTION **********/
     #views .images-container {
         gap: 2rem;
         padding: 0 2rem 0 2rem;
@@ -638,7 +627,7 @@ main .content {
     }
 
     #views {
-        margin-bottom: 8rem;
+        margin-bottom: 10rem;
     }
 
     #views .img-wrapper {
