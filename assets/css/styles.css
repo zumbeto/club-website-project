@@ -163,8 +163,8 @@ nav .navbar {
 /********** HEADER **********/
 
 #header {
-    background-image: url("resources/images/mountain-1.jpg"); /* FALLBACK IMG */
-    background: url("resources/images/mountain-1.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: url("../images/mountain-1.jpg"); /* FALLBACK IMG */
+    background: url("../images/mountain-1.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
