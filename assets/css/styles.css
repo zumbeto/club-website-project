@@ -81,6 +81,28 @@ body {
     margin: 15rem auto;
 }
 
+.cta {
+    display: block;
+    cursor: pointer;
+    border: none;
+    margin-left: 10rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    padding: 2rem 2rem 2rem 2rem;
+    color: #886434;
+    border-radius: 1rem;
+    transition: all .3s ease-in-out;
+    background-color: #50ffad; /* FALLBACK COLOR */
+    background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
+    background-blend-mode: screen;
+}
+
+.cta:hover, .cta:active, .cta:visited {
+    color: #ffeeda;
+}
+
 /********** GRID SYSTEM **********/
 
 .container {
@@ -175,10 +197,13 @@ nav .navbar {
 }
 
 .navbar .nav-link:hover {
-    color: #83b3ac;
+    color: #ffeeda;
 }
 
 /********** HEADER **********/
+.heading-container {
+    width: 100%;
+}
 
 #header {
     background-image: url("../images/mountain-1.jpg"); /* FALLBACK IMG */
@@ -191,8 +216,9 @@ nav .navbar {
     position: relative;
     top: -10rem; /* To compensate for fixed navbar */
     display: flex;
+    flex-flow: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 #header h1 {
@@ -414,12 +440,11 @@ main .content {
 
     #header p {
         font-size: 2.5rem;
-        padding: 0 10rem 0 10rem;
+        padding: 1rem 10rem 1rem 10rem;
     }
 
     #header .text-wrapper {
-        padding: 0;
-        margin: 0;
+        padding: 2rem 0 2rem 0;
     }
 
     .menu-container .logo {
@@ -476,6 +501,11 @@ main .content {
 
     #header p {
         padding: 0 5rem 0 5rem;
+    }
+
+    /********** CTA **********/
+    #header .cta {
+        margin-left: 5rem;
     }
 
     /********** MAIN CONTENT **********/
@@ -587,6 +617,10 @@ main .content {
     #header p {
         font-size: 2rem;
         padding: 0 3rem 0 3rem;
+    }
+
+    #header .cta {
+        margin-left: 3rem;
     }
 
     #main .content .main-heading {
