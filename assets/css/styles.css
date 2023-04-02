@@ -89,7 +89,7 @@ body {
     text-decoration: none;
     font-size: 1.6rem;
     font-weight: 700;
-    letter-spacing: .1rem;
+    letter-spacing: .05rem;
     padding: 2rem 2rem 2rem 2rem;
     color: #886434;
     border-radius: 1rem;
@@ -185,20 +185,22 @@ nav .navbar {
 
 .navbar .nav-link {
     text-decoration: none;
-    font-size: 1.6rem;
-    font-weight: 700;
-    letter-spacing: .1rem;
-    padding: 1rem 2rem 1rem 2rem;
-    color: #886434;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0 2rem 0 2rem;
+    color: #50ffad; /* Fallback */
+    background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-blend-mode: screen;
     border-radius: 1rem;
     transition: all .3s;
-    background-color: #50ffad; /* FALLBACK COLOR */
-    background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
-    background-blend-mode: screen;
 }
 
 .navbar .nav-link:hover {
-    color: #ffeeda;
+    color: #ffeeda; /* Fallback*/
+    -webkit-text-fill-color: #ffeeda;
 }
 
 /********** HEADER **********/
@@ -226,7 +228,7 @@ nav .navbar {
     font-size: 5rem;
     font-weight: 700;
     font-style: italic;
-    letter-spacing: .5rem;
+    letter-spacing: .2rem;
     line-height: 1.7;
     text-transform: capitalize;
     color: #886434; /* FALLBACK COLOR */
@@ -242,7 +244,7 @@ nav .navbar {
     font-size: 3.5rem;
     font-weight: 500;
     text-transform: capitalize;
-    letter-spacing: .3rem;
+    letter-spacing: .1rem;
     line-height: 1.5;
     font-style: italic;
     background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
