@@ -94,7 +94,7 @@ body {
     color: #886434;
     border-radius: 1rem;
     transition: all .3s ease-in-out;
-    background-color: #50ffad; /* FALLBACK COLOR */
+    background-color: #87ceeb; /* FALLBACK COLOR */
     background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
     background-blend-mode: screen;
     animation: fadeInLeft 1.7s ease-in-out;
@@ -166,7 +166,7 @@ footer {grid-area: footer;}
     font-weight: 900;
     font-style: italic;
     letter-spacing: 1rem;
-    color: #886434;
+    color: #87ceeb; /* Fallback */
     background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
     background-clip: text;
     -webkit-background-clip: text;
@@ -192,9 +192,9 @@ nav .navbar {
     max-width: 13rem;
     padding: 1rem;
     border-radius: 1rem;
+    color: #886434;
     background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
     background-blend-mode: screen;
-    color: #886434;
     transition: all .3s;
 }
 
@@ -261,7 +261,8 @@ nav .navbar {
     font-size: 2rem;
     font-weight: 600;
     color: #886434;
-    background-color: rgb(136, 100, 52, 0.4);
+    background: linear-gradient(#32cd32, black), linear-gradient(90deg, #87ceeb, black), linear-gradient(-90deg, #ff7f50, black);
+    background-blend-mode: screen;
     display: block;
     text-align: center;
     width: 100%;
@@ -273,7 +274,6 @@ nav .navbar {
 
 .mobile-nav a:hover {
     color: #ffeeda;
-    background-color: rgb(136, 100, 52, 0.2);
 }
 
 /********** HEADER **********/
@@ -304,7 +304,7 @@ nav .navbar {
     letter-spacing: .2rem;
     line-height: 1.7;
     text-transform: capitalize;
-    color: #886434; /* FALLBACK COLOR */
+    color: #87ceeb; /* FALLBACK COLOR */
     background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
     background-clip: text;
     -webkit-background-clip: text;
@@ -320,6 +320,7 @@ nav .navbar {
     letter-spacing: .1rem;
     line-height: 1.5;
     font-style: italic;
+    color: #87ceeb;
     background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
     background-clip: text;
     -webkit-background-clip: text;
@@ -525,21 +526,19 @@ main .content {
 }
 
 @media only screen and (max-width: 800px) {
+    .menu-container {
+        padding: 0 5rem 0 5rem;
+    }
+
     #header h1 {
         margin: 0;
-        padding: 1rem 10rem 1rem 10rem;
+        padding: 1rem 5rem 1rem 5rem;
         font-size: 3rem;
-        color: #886434; /* FALLBACK COLOR */
-        background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-blend-mode: screen;
     }
 
     #header p {
         font-size: 2.5rem;
-        padding: 1rem 10rem 1rem 10rem;
+        padding: 1rem 5rem 1rem 5rem;
     }
 
     #header .text-wrapper {
@@ -548,6 +547,10 @@ main .content {
 
     .menu-container .logo {
         font-size: 3rem;
+    }
+
+    #header .cta {
+        margin-left: 5rem;
     }
 
     .sidebar .images-container {
@@ -585,22 +588,6 @@ main .content {
         font-size: 1.6rem;
         letter-spacing: .2rem;
         line-height: 1.5;
-    }
-
-    .menu-container {
-        padding: 0 5rem 0 5rem;
-    }
-
-    #header h1 {
-        padding: 0 5rem 0 5rem;
-    }
-
-    #header p {
-        padding: 0 5rem 0 5rem;
-    }
-
-    #header .cta {
-        margin-left: 5rem;
     }
 
     main .content {
