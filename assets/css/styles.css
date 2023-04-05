@@ -21,10 +21,56 @@ body {
     background-blend-mode: screen;
 }
 
+.container {
+    max-height: 900rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: 10rem auto 1fr minmax(100rem, auto) auto;
+    grid-template-areas:
+        "nav nav nav"
+        "header header header"
+        "content content sidebar"
+        "section section section"
+        "footer footer footer";
+}
+
+nav {grid-area: nav;}
+header {grid-area: header;}
+main {grid-area: content;}
+aside {grid-area: sidebar;}
+section {grid-area: section;}
+footer {grid-area: footer;}
+
+@media only screen and (max-width: 1400px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(5rem, auto) auto 1fr minmax(125rem, auto) minmax(125rem, auto) auto;
+        grid-template-areas: 
+            "nav"
+            "header"
+            "content"
+            "sidebar"
+            "section"
+            "footer";
+    }
+}
+
 .img-wrapper {
     width: 35rem;
     height: 30rem;
     overflow: hidden;
+}
+
+.img-wrapper:nth-child(2) {
+    transition-delay: .6s;
+}
+
+.img-wrapper:nth-child(3) {
+    transition-delay: .8s;
+}
+
+.img-wrapper:nth-child(4) {
+    transition-delay: 1s;
 }
 
 .img {
@@ -97,47 +143,28 @@ body {
     background-color: #87ceeb; /* FALLBACK COLOR */
     background: linear-gradient(#32cd32, transparent), linear-gradient(90deg, #87ceeb, transparent), linear-gradient(-90deg, #ff7f50, transparent);
     background-blend-mode: screen;
-    animation: fadeInLeft 1.7s ease-in-out;
+    animation: fadeInLeft 1.2s ease-in-out;
 }
 
 .cta:hover, .cta:active, .cta:visited {
     color: #ffeeda;
 }
 
-/********** GRID SYSTEM **********/
-
-.container {
-    max-height: 900rem;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: 10rem auto 1fr minmax(100rem, auto) auto;
-    grid-template-areas:
-        "nav nav nav"
-        "header header header"
-        "content content sidebar"
-        "section section section"
-        "footer footer footer";
+.animate-on-scroll-left {
+    opacity: 0;
+    transform: translateX(-15rem);
+    transition: all .5s .2s ease-in-out;
 }
 
-nav {grid-area: nav;}
-header {grid-area: header;}
-main {grid-area: content;}
-aside {grid-area: sidebar;}
-section {grid-area: section;}
-footer {grid-area: footer;}
+.animate-on-scroll-right {
+    opacity: 0;
+    transform: translateX(15rem);
+    transition: all .5s .2s ease-in-out;
+}
 
-@media only screen and (max-width: 1400px) {
-    .container {
-        grid-template-columns: 1fr;
-        grid-template-rows: minmax(5rem, auto) auto 1fr minmax(125rem, auto) minmax(125rem, auto) auto;
-        grid-template-areas: 
-            "nav"
-            "header"
-            "content"
-            "sidebar"
-            "section"
-            "footer";
-    }
+.animate {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /********** NAVBAR **********/
@@ -310,7 +337,7 @@ nav .navbar {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-blend-mode: screen;
-    animation: fadeInLeft 1.2s ease-in-out;
+    animation: fadeInLeft .8s ease-in-out;
 }
 
 #header p {
@@ -326,7 +353,7 @@ nav .navbar {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-blend-mode: screen;
-    animation: fadeInLeft 1.5s ease-in-out;
+    animation: fadeInLeft 1s ease-in-out;
 }
 
 /********** MAIN CONTENT **********/
@@ -562,6 +589,29 @@ main .content {
         width: 50rem;
         height: 40rem;
         overflow: hidden;
+    }
+
+    .animate-on-scroll-left {
+        opacity: 0;
+        transform: translateX(-5rem);
+        transition: all .5s .2s ease-in-out;
+    }
+
+    .animate {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    .img-wrapper:nth-child(2) {
+        transition-delay: .3s;
+    }
+    
+    .img-wrapper:nth-child(3) {
+        transition-delay: .4s;
+    }
+
+    .img-wrapper:nth-child(4) {
+        transition-delay: .5s;
     }
 }
 
